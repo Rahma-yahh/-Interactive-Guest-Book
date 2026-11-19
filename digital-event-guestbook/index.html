@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Event Guest Book</title>
+    <!-- CDN Bootstrap dan Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css"
+        integrity="sha384-Bk5cbLkZQ5raZ0+H2/+VbfYx3WpvxvQK4zqXZr7sYODuaX7bKXoSOnipQxkaS8sv" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar sm:navbar-expand bg-1 fg-2 px-3 py-2 shadow-sm">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <div class="rounded-circle bg-light d-flex align-items-center justify-content-center text-primary border"
+                    style="width: 45px; height: 45px;">
+                    <i class="bi bi-person-fill fs-5"></i>
+                </div>
+                <div>
+                    <a class="navbar-brand fw-bold m-0 p-0 text-dark" href="#" style="font-size: 1rem;">Digital Event
+                        Guest Book</a>
+                    <small class="text-muted d-block" style="font-size: 0.8rem;">Seminar Teknologi & Inovasi</small>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-light text-dark border px-3 py-2 rounded-pill d-none d-md-inline-block">
+                    <i class="bi bi-calendar-event me-1 text-secondary"></i> 19 November 2026
+                </span>
+                <button
+                    class="btn btn-sm btn-light rounded-circle p-2 border d-flex align-items-center justify-content-center"
+                    style="width: 38px; height: 38px;" title="Bagikan">
+                    <i class="bi bi-share text-primary"></i>
+                </button>
+                <button
+                    class="btn btn-sm btn-light rounded-circle p-2 border d-flex align-items-center justify-content-center"
+                    style="width: 38px; height: 38px;" title="WhatsApp">
+                    <i class="bi bi-whatsapp text-success"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- konten -->
+    <div class="text-center py-3">
+        <p class="teks-sambutan1 fs-4 m-0">Terima kasih telah hadir di acara kami!</p>
+        <div class="hiasan-garis">#</div>
+    </div>
+    <section class="area-buku-tamu container my-3">
+        <h1 class="judul-utama text-center mb-4">Event Guest Book</h1>
+        <div class="kontainer konten row g-4">
+            <!-- box kelas kiri -->
+            <div class="col-lg-4">
+                <div class="kotak-formulir card p-3 border-0 shadow-sm">
+                    <h3><i class="bi bi-pencil me-2"></i>Leave Message</h3>
+                    <form id="formBukuTamu"> //terhung ke javascrib//
+                        <label for="inputNama" class="form-label fw-semibold">Nama lengkap</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-light">
+                                <i class="bi bi-person"></i>
+                            </span>
+                            <input type="text" id="inputNama" class="form-control" placeholder="Nama lengkap">
+                        </div>
+                        <label for="inputPesan" class="form-label fw-semibold"> Ucapan ucapan/pesan</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-light">
+                                <i class="bi bi-chat-dots"></i>
+                            </span>
+                            <textarea id="inputPesan" class="form-control"
+                                placeholder="Tulis ucapan/pesan...."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-2 w-100"><i class="bi bi-send me-2"></i>Kirim
+                            Pesan</button>
+                    </form>
+                </div>
+            </div>
+            <!-- box kelas kanan -->
+            <div class="col-lg-8">
+                <div class="daftar-pesan card p-4 border-0 shadow-sm">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="mb-0">
+                            <i class="bi bi-people me-2"></i>Daftar Pesan Pengunjung
+                        </h3>
+                        <span id="badgeTotalPesan" class="bg-primary fs-6 rounded-pill px-3 text-center">Total pesan 0</span>
+                    </div>
+                    <ul class="list-group list-group-flush" id="listPesan">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-center py-4 text-muted">
+        <p class="teks-sambutan2 fs-4 mb-2"> Sampai jumpa di acara berikutnya!</p>
+        <div class="hiasan-garis">#</div>
+        <small>Panitia Seminar teknologi & Inovasi 2026</small>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
