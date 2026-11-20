@@ -10,7 +10,7 @@ function renderPesan() {
     listPesan.innerHTML = "";
     badgeTotalPesan.textContent =`Total pesan ${daftarPesan.length}`;
     if (daftarPesan.length === 0) {
-        listPesan.innerHTML = `<p class="text-muted text-center py-3 fst-italic">Belum ada pesan yang dikirim</p>;`
+        listPesan.innerHTML = `<p class="text-muted text-center py-3 fst-italic">Belum ada pesan yang dikirim</p>`
         return;
     }
     daftarPesan.forEach((item) => {
